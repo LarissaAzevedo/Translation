@@ -1,0 +1,11 @@
+{
+  "button": {
+    "german": "German",
+    "english": "English",
+    "portuguese": "Portuguese",
+    "french": "French",
+    "spanish": "Spanish"
+  },
+  "title": "Working with Translation",
+  "salutation": "Hello"
+}
