@@ -1,11 +1,9 @@
 import Head from "next/head";
-import { useTranslation } from "next-i18next";
+import { withTranslation } from "../i18n";
 
 import styles from "../styles/Home.module.css";
 
-export default function Home() {
-  const { t } = useTranslation("common");
-
+const Home = ({ t }) => {
   return (
     <div className={styles.container}>
       <Head>
@@ -15,8 +13,11 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.salutation}>{t("title")}</h1>
+        <h1 className={styles.title}>{t("common:title")}</h1>
+        <h2 className={styles.salutation}>{t("common:salutation")}</h2>
       </main>
     </div>
   );
-}
+};
+
+export default withTranslation()(Home);

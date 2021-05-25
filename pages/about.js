@@ -1,10 +1,8 @@
-import useTranslation from "next-translate/useTranslation";
+import { withTranslation } from "../i18n";
 
 import styles from "../styles/Home.module.css";
 
-export default function About() {
-  const { t } = useTranslation();
-
+const About = ({ t }) => {
   return (
     <div className={styles.container}>
       <main className={styles.main}>
@@ -12,4 +10,6 @@ export default function About() {
       </main>
     </div>
   );
-}
+};
+
+export default withTranslation()(About);
